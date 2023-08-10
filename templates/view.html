@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>National day view photo</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}"
+</head>
+  <body>
+    <h1>National Day Photo</h1>
+    {% for pic in pics %}
+      <img src="{{ url_for('get_file', filename=pic)}}" alt="{{ pic }}">
+    {% endfor %}
+    <p><a href="{{url_for('home')}}">Home page</a></p>
+  </body>
+</html>
